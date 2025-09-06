@@ -219,7 +219,7 @@ knowledge_base = [
 texts_for_search = [item['text'] for item in knowledge_base]
 
 print("Carregando modelo SentenceTransformer. Isso pode levar um tempo na primeira vez...")
-model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 print("Modelo carregado. Gerando embeddings da base de conhecimento...")
 knowledge_embeddings = model.encode(texts_for_search)
 print("Embeddings gerados.")
