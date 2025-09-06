@@ -1,0 +1,199 @@
+/* Estilos para o Chatbot - INÍCIO */
+.assistente-virtual {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.icone-assistente {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icone-assistente img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.popup-assistente {
+    display: none; /* Começa escondido */
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 320px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.popup-assistente.aberto {
+    display: flex; /* Exibe quando a classe 'aberto' é adicionada */
+}
+
+.header-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #0056b3;
+}
+
+.titulo-chat {
+    font-weight: bold;
+}
+
+.botao-minimizar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.conversa-container {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mensagem {
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.mensagem.bot-mensagem {
+    background-color: #e2e2e2;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.mensagem.usuario-mensagem {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.mensagem-imagem {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background-color: #ffffff;
+}
+
+#input-usuario {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+#enviar-pergunta {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#enviar-pergunta:hover {
+    background-color: #0056b3;
+}
+/* Estilos para o Chatbot - FIM */
+
+/* Estilos para o Pop-up de Feedback - INÍCIO */
+.feedback-popup-overlay {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.feedback-popup-content {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 400px;
+    font-family: 'Inter', sans-serif;
+}
+
+.feedback-popup-content h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.feedback-popup-content p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.botao-feedback {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-feedback:hover {
+    background-color: #229954;
+}
+
+.fechar-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+}
+/* Estilos para o Pop-up de Feedback - FIM */
