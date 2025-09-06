@@ -1,4 +1,6 @@
-Flask
-scikit-learn
+flask
+flask-cors
 sentence-transformers
+scikit-learn
 numpy
+gunicorn
